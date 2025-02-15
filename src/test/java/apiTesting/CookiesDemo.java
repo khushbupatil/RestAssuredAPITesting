@@ -1,5 +1,6 @@
 package apiTesting;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
@@ -21,6 +22,7 @@ public class CookiesDemo {
 		.then()
 			.cookie("AEC","AVcja2dI8IOgISNvGCZNuYscGTKBDpMOEOlMtp2fslywRvYcJx9scgcI3D0")// this should fail as everytime cookie value will be diff
 			.log().all();	
+		
 	}
 	
 	@Test(priority=2)
